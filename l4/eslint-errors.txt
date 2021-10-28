@@ -3,5 +3,5 @@ eqeqeq
 no-undef
 no-plusplus
 no-return-assing
-efgB    bbbfadfb
+no-undef
 
