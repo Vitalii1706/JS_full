@@ -22,7 +22,6 @@ const renderTasks = (tasksList) => {
       checkboxElem.checked = done;
       checkboxElem.classList.add('list__item-checkbox');
       listItemElem.append(checkboxElem, text);
-
       return listItemElem;
     });
 
