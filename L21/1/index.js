@@ -1,5 +1,3 @@
-'use strict';
-
 export const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
@@ -8,10 +6,6 @@ export const tasks = [
   { text: 'Buy meat', done: true },
 ];
 
-/**
- * @param {object[]} tasksList
- * @return {undefined}
- */
 const renderTasks = (tasksList) => {
   const listElem = document.querySelector('.list');
 
