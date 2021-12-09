@@ -1,10 +1,10 @@
-const getitemsList = () => {
+const getItemsList = () => {
   const elementsList = document.querySelectorAll('.technology');
   console.dir(elementsList);
   return elementsList;
 };
 
-getitemsList();
+getItemsList();
 
 const getItemsArray = () => {
   const nodeList = document.querySelectorAll('.tool');
