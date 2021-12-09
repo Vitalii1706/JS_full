@@ -4,6 +4,6 @@ const setButton = (buttonText) => {
 
   return elem;
 };
-setButton('<button>button text</button>');
+const buttonText = '<button>button text</button>';
 
 export { setButton };
