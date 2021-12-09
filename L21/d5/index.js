@@ -1,9 +1,7 @@
 const setButton = (buttonText) => {
   const elem = document.querySelector('body');
-  buttonText = '<button>button text</button>';
   elem.innerHTML = buttonText;
-
   return elem;
 };
-
+setButton('<button>button text</button>');
 export { setButton };
