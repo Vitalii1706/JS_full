@@ -1,3 +1,5 @@
+const listElem = document.querySelector('.list');
+
 export const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
@@ -5,8 +7,6 @@ export const tasks = [
   { text: 'Visit doctor', done: true },
   { text: 'Buy meat', done: true },
 ];
-
-const listElem = document.querySelector('.list');
 
 const renderTasks = (tasksList) => {
   const listItemsElems = tasksList
