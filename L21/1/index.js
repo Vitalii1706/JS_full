@@ -6,9 +6,9 @@ export const tasks = [
   { text: 'Buy meat', done: true },
 ];
 
-const renderTasks = (tasksList) => {
-  const listElem = document.querySelector('.list');
+const listElem = document.querySelector('.list');
 
+const renderTasks = (tasksList) => {
   const listItemsElems = tasksList
     .sort((a, b) => a.done - b.done)
     .map(({ text, done }) => {
