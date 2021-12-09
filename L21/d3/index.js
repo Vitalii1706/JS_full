@@ -1,34 +1,26 @@
-class Vehicle {
-  constructor(name, numberOfWheels) {
-    this.name = name;
-    this.numberOfWheels = numberOfWheels;
-  }
+const getTitle = () => {
+  const titleElem = document.querySelector('.title');
+  return titleElem;
+};
 
-  move() {
-    console.log(`${this.name} is moving`);
-  }
+getTitle();
 
-  stop() {
-    console.log(`${this.name} stopped`);
-  }
-}
+const getDescription = () => {
+  const elem = document.querySelector('.about');
+  return elem.innerText;
+};
+getDescription();
 
-class Ship extends Vehicle {
-  constructor(name, numberOfWheels, maxSpeed) {
-    super(name, numberOfWheels);
-    this.maxSpeed = maxSpeed;
-  }
+const getPlans = () => {
+  const elem = document.querySelector('.plans');
+  return elem.innerHTML;
+};
+getPlans();
 
-  move() {
-    console.log(`${this.name} lifting anchor up`);
-    super.move();
-  }
+const getGoal = () => {
+  const elem = document.querySelector('.goal');
+  return elem.outerHTML;
+};
+getGoal();
 
-  stop() {
-    super.stop();
-    console.log(`${this.name} lifting anchor down`);
-  }
-}
-
-const ship1 = new Ship('Eva', false, 25);
-console.log(ship1);
+export { getTitle, getDescription, getPlans, getGoal };
