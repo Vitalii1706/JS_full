@@ -1,16 +1,9 @@
-const getTitleElement = () => {
-  const titleElem = document.querySelector('.title');
-  console.dir(titleElem);
-  return titleElem;
+const setButton = (buttonText) => {
+  const elem = document.querySelector('body');
+  elem.innerHTML = buttonText;
+
+  return elem;
 };
+setButton('<button>button text</button>');
 
-getTitleElement();
-
-const getInputElement = () => {
-  const inputElem = document.querySelector('input[type=text]');
-  console.dir(inputElem);
-  return inputElem;
-};
-getInputElement();
-
-export { getTitleElement, getInputElement };
+export { setButton };

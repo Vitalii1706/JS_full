@@ -1,8 +1,8 @@
-const setTitle = (text) => {
+const getTitle = (text) => {
   const elem = document.querySelector('.title');
   elem.textContent = text;
   console.log(elem);
   return elem;
 };
 
-export { setTitle };
+export { getTitle };
