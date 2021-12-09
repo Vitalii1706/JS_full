@@ -14,4 +14,4 @@ const getItemsArray = () => {
 };
 getItemsArray();
 
-//export { getItemsList, getItemsArray };
+export { getItemsList, getItemsArray };
