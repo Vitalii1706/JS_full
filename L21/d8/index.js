@@ -1,4 +1,4 @@
-export function finishList() {
+function finishList() {
   const elemUl = document.querySelector('.list');
   const elemLi = document.querySelector('.special');
   const li1 = document.createElement('li');
@@ -14,3 +14,5 @@ export function finishList() {
   li6.textContent = 6;
   elemLi.after(li6);
 }
+
+export { finishList };
