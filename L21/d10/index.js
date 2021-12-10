@@ -1,17 +1,9 @@
-const getItemsList = () => {
-  const elementsList = document.querySelectorAll('.technology');
-  console.dir(elementsList);
-  return elementsList;
-};
-
-getItemsList();
-
-const getItemsArray = () => {
-  const nodeList = document.querySelectorAll('.tool');
-  const elementsArray = Array.from(nodeList);
-  console.dir(elementsArray);
-  return elementsArray;
-};
-getItemsArray();
-
-export { getItemsList, getItemsArray };
+export function manageClasses() {
+  document.querySelector('.one').classList.add('selected');
+  document.querySelector('.two').classList.remove('selected');
+  document.querySelector('.three').classList.toggle('three_done');
+  if (document.querySelector('.four').classList.contains('some-class')) {
+    document.querySelector('.four').classList.add('another-class');
+  }
+}
+//manageClasses();
