@@ -4,6 +4,4 @@ const clearList = () => {
   return (element.innerHTML = '');
 };
 
-clearList();
-
 export { clearList };
