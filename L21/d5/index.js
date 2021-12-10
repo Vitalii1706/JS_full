@@ -3,5 +3,4 @@ const setButton = (buttonText) => {
   return (elem.innerHTML = buttonText);
 };
 
-setButton('<button>button text</button>');
 export { setButton };
