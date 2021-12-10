@@ -1,16 +1,11 @@
-const getTitleElement = () => {
-  const titleElem = document.querySelector('.title');
-  console.dir(titleElem);
-  return titleElem;
+const finishForm = () => {
+  const form = document.querySelector('.login-form');
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.name = 'login';
+  form.prepend(input);
+  const inputPasword = document.querySelector('input[type = "text"]');
+  inputPasword.type = 'password';
 };
 
-getTitleElement();
-
-const getInputElement = () => {
-  const inputElem = document.querySelector('input[type=text]');
-  console.dir(inputElem);
-  return inputElem;
-};
-getInputElement();
-
-export { getTitleElement, getInputElement };
+export { finishForm };
