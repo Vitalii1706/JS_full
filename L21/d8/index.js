@@ -14,4 +14,4 @@ export const finishList = () => {
   li6.textContent = 6;
   elemLi.after(li6);
 };
-finishList();
+//finishList();
