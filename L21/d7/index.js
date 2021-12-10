@@ -1,17 +1,9 @@
-const getTitle = () => {
-  const titleElem = document.querySelector('.title');
-  console.dir(titleElem);
-  return titleElem;
+const createButton = (buttonText) => {
+  const elem = document.querySelector('body');
+  const butt = document.createElement('button');
+  butt.textContent = buttonText;
+  elem.append(butt);
+  return elem;
 };
 
-getItemsList();
-
-const getItemsArray = () => {
-  const nodeList = document.querySelectorAll('.tool');
-  const elementsArray = Array.from(nodeList);
-  console.dir(elementsArray);
-  return elementsArray;
-};
-getItemsArray();
-
-//export { getItemsList, getItemsArray };
+export { createButton };
