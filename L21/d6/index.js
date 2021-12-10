@@ -1,5 +1,5 @@
 const clearList = () => {
-  const element = document.querySelectorAll('.categories');
+  const element = document.querySelector('.categories');
   console.dir(element);
   return (element.innerHTML = '');
 };
