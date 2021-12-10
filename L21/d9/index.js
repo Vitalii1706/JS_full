@@ -1,11 +1,11 @@
-const finishForm = () => {
-  const form = document.querySelector('.login-form');
+export const finishForm = () => {
+  const inputPasword = document.querySelector('input[type = "text"]');
+  inputPasword.type = 'password';
   const input = document.createElement('input');
   input.type = 'text';
   input.name = 'login';
+  const form = document.querySelector('.login-form');
   form.prepend(input);
-  const inputPasword = document.querySelector('input[type = "text"]');
-  inputPasword.type = 'password';
 };
-
-export { finishForm };
+//finishForm();
+//export { getTitleElement, getInputElement };
