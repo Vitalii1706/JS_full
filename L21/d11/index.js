@@ -7,5 +7,5 @@ const squaredNumbers = () =>
     return el;
   });
 
-squaredNumbers();
-//export { squaredNumbers };
+//squaredNumbers();
+export { squaredNumbers };
