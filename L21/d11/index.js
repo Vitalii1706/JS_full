@@ -1,11 +1,11 @@
-function squaredNumbers() {
-  const arrAtr = Array.from(document.querySelectorAll('.number')).map((el) => {
-    const squarNum = el.dataset.number * el.dataset.number;
-    el.setAttribute('data-squared-number', squarNum);
+const squaredNumbers = () =>
+  Array.from(document.querySelectorAll('.number')).map((el) => {
+    el.setAttribute(
+      'data-squared-number',
+      el.dataset.number * el.dataset.number
+    );
     return el;
   });
-  return arrAtr;
-}
 
-//squaredNumbers();
-export { squaredNumbers };
+squaredNumbers();
+//export { squaredNumbers };
