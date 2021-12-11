@@ -1,17 +1,11 @@
-const getTitle = () => {
-  const titleElem = document.querySelector('.title');
-  console.dir(titleElem);
-  return titleElem;
-};
+function squaredNumbers() {
+  const arrAtr = Array.from(document.querySelectorAll('.number')).map((el) => {
+    const squarNum = el.dataset.number * el.dataset.number;
+    el.setAttribute('data-squared-number', squarNum);
+    return el;
+  });
+  return arrAtr;
+}
 
-getItemsList();
-
-const getItemsArray = () => {
-  const nodeList = document.querySelectorAll('.tool');
-  const elementsArray = Array.from(nodeList);
-  console.dir(elementsArray);
-  return elementsArray;
-};
-getItemsArray();
-
-//export { getItemsList, getItemsArray };
+//squaredNumbers();
+export { squaredNumbers };
