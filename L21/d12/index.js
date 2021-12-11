@@ -1,20 +1,8 @@
-class Wallet {
-  constructor() {
-    this.balance = 0;
-  }
-
-  getBalance() {
-    return this.balance;
-  }
-  deposit(amount) {
-    this.balance += amount;
-  }
-
-  withdraw(amount) {
-    if (amount > this.balance) {
-      console.log('No enough funds');
-      return;
-    }
-    this.balance -= amount;
-  }
+function getSection(num) {
+  const getSpan = document.querySelector(`span[data-number='${num}']`);
+  const result = getSpan.closest('.box');
+  return result.dataset.section;
 }
+
+//console.log(getSection(6));
+export { getSection };
