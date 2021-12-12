@@ -47,3 +47,18 @@ const removeAll = () => {
 };
 
 removeButt.addEventListener('click', removeAll);
+
+const attatchHanButt = document.querySelector('.attach-handlers-btn');
+
+const attatchAll = () => {
+  divElem.addEventListener('click', logGreyDiv, true);
+  divElem.addEventListener('click', logGreenDiv);
+
+  pElem.addEventListener('click', logGreyP, true);
+  pElem.addEventListener('click', logGreenP);
+
+  spanElem.addEventListener('click', logGreySpan, true);
+  spanElem.addEventListener('click', logGreenSpan);
+};
+
+attatchHanButt.addEventListener('click', attatchAll);
