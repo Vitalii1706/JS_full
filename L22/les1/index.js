@@ -1,7 +1,11 @@
-const logTarget = (text, color) => {
-  const eventsListElem = document.querySelector('.events-list');
+const divElem = document.querySelector('.rect_div');
+const pElem = document.querySelector('.rect_p');
+const spanElem = document.querySelector('.rect_span');
 
-  eventsListElem.innerHTML += `<span style="color: ${color}; margin-lift: 8px;">div</span> `;
+const eventsListElem = document.querySelector('.events-list');
+
+const logTarget = (text, color) => {
+  eventsListElem.innerHTML += `<span style="color: ${color}; margin-left:8px;">div</span> `;
 };
 
 const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
@@ -18,5 +22,5 @@ divElem.addEventListener('click', logGreenDiv);
 pElem.addEventListener('click', logGreyP, true);
 pElem.addEventListener('click', logGreenP);
 
-spamElem.addEventListener('click', logGreySpan, true);
-spamElem.addEventListener('click', logGreenSpan);
+spanElem.addEventListener('click', logGreySpan, true);
+spanElem.addEventListener('click', logGreenSpan);
