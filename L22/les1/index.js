@@ -24,3 +24,11 @@ pElem.addEventListener('click', logGreenP);
 
 spanElem.addEventListener('click', logGreySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
+
+const clearButt = document.querySelector('.clear-btn');
+
+const clearAll = () => {
+  eventsListElem.innerHTML = '';
+};
+
+clearButt.addEventListener('click', clearAll);
