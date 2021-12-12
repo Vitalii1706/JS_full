@@ -2,9 +2,7 @@ const buttElemts = Array.from(document.querySelectorAll('.pagination__page'));
 console.log(buttElemts);
 
 const handleClick = (event) => {
-  console.log(event.target.textContent);
+  console.log(event.target.dataset.pageNumber);
 };
 
-buttElemts[0].addEventListener('click', handleClick);
-buttElemts[1].addEventListener('click', handleClick);
-buttElemts[2].addEventListener('click', handleClick);
+buttElemts.map((btn) => btn.addEventListener('click', handleClick));
