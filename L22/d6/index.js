@@ -1,7 +1,9 @@
-const clearList = () => {
-  const element = document.querySelector('.categories');
-  console.dir(element);
-  return (element.innerHTML = '');
+const buttElemts = Array.from(document.querySelectorAll('.btn'));
+console.log(buttElemts);
+
+const handleClick = (event) => {
+  console.log(event.target.textContent);
 };
 
-export { clearList };
+buttElemts[0].addEventListener('click', handleClick);
+buttElemts[1].addEventListener('click', handleClick);
