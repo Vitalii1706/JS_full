@@ -1,8 +1,8 @@
-const getTitle = (text) => {
-  const elem = document.querySelector('.title');
-  elem.textContent = text;
-  console.log(elem);
-  return elem;
+const clickButt = document.querySelector('.search__btn');
+const inputElem = document.querySelector('.search__input');
+
+const inputConsole = () => {
+  console.log(inputElem.value);
 };
 
-export { getTitle };
+clickButt.addEventListener('click', inputConsole);
