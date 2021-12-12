@@ -32,3 +32,18 @@ const clearAll = () => {
 };
 
 clearButt.addEventListener('click', clearAll);
+
+const removeButt = document.querySelector('.remove-handlers-btn');
+
+const removeAll = () => {
+  divElem.removeEventListener('click', logGreyDiv, true);
+  divElem.removeEventListener('click', logGreenDiv);
+
+  pElem.removeEventListener('click', logGreyP, true);
+  pElem.removeEventListener('click', logGreenP);
+
+  spanElem.removeEventListener('click', logGreySpan, true);
+  spanElem.removeEventListener('click', logGreenSpan);
+};
+
+removeButt.addEventListener('click', removeAll);
