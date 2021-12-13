@@ -1,6 +1,6 @@
 const listElem = document.querySelector('.list');
 
-export const tasks = [
+const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
   { text: 'Visit party', done: false },
@@ -29,3 +29,9 @@ const renderTasks = (tasksList) => {
 };
 
 renderTasks(tasks);
+
+//algo
+//1. Настроїти чекбокс
+//1.1 налаштувати новий стан справ.
+//2. Налаштувати кнопку Greate
+//2.2 Очистити поле вводу
