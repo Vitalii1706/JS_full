@@ -41,6 +41,9 @@ const addTask = () => {
     text: inputElem.value,
     done: false,
   };
+  if (inputElem.value === '') {
+    return;
+  }
   tasks.push(task);
   tasks.forEach((item, i) => {
     item.id = i + 1;
