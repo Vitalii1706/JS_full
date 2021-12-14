@@ -9,9 +9,9 @@ const tasks = [
 ];
 
 tasks.forEach((item, i) => {
-  item.id = i + 1000;
+  item.id = i + 1;
 });
-console.log(tasks);
+
 const renderTasks = (tasksList) => {
   listElem.innerHTML = '';
   const tasksElems = tasksList
@@ -22,7 +22,7 @@ const renderTasks = (tasksList) => {
       const checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
       checkbox.checked = done;
-      checkbox.dataset.id = id;
+      checkbox.id = id;
       checkbox.classList.add('list__item-checkbox');
       if (done) {
         listItemElem.classList.add('list__item_done');
@@ -41,9 +41,6 @@ const addTask = () => {
     text: inputElem.value,
     done: false,
   };
-  if (inputElem.value === '') {
-    return;
-  }
   tasks.push(task);
   tasks.forEach((item, i) => {
     item.id = i + 1;
@@ -56,15 +53,15 @@ const createBtn = document.querySelector('.create-task-btn');
 createBtn.addEventListener('click', addTask);
 
 const handleClick = (event) => {
-  const clickedCheckbox = event.target.dataset.id;
+  const clickedChecbox = event.target.id;
   tasks.forEach((el) => {
-    if (el.id === +clickedCheckbox) {
+    if (el.id === +clickedChecbox) {
       return el.done === false ? (el.done = true) : (el.done = false);
     }
   });
 
   return renderTasks(tasks);
 };
-
 listElem.addEventListener('click', handleClick);
+
 renderTasks(tasks);
