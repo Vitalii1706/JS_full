@@ -1,5 +1,27 @@
-export const mult = (a) => (b) => a * b;
-export const twice = mult(2);
-export const triple = mult(3);
+"use strict";
 
-//export { mult, twice, triple};
+/**
+ * @return {undefined}
+ */
+
+const printing = () => {
+  console.log(1);
+
+  setTimeout(function () {
+    console.log(5);
+  }, 1000);
+
+  console.log(2);
+
+  setTimeout(function () {
+    console.log(4);
+  }, 0);
+
+  setTimeout(function () {
+    console.log(6);
+  }, 2000);
+
+  console.log(3);
+};
+
+printing();
