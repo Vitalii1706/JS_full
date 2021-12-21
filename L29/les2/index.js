@@ -1,27 +1,17 @@
-const favorites = ["id-2"];
+"use strict";
 
-const tree = {
-  id: "id-1",
-  name: "Products",
-  nodes: [
-    {
-      id: "id-2",
-      name: "Food",
-      nodes: [],
-    },
-  ],
+const pinger = (count, period) => {
+  let i = count;
+  console.log("Ping");
+  const interval = setInterval(() => {
+    if (--i > 0) {
+      console.log("Ping");
+    } else {
+      clearInterval(interval);
+    }
+  }, period);
 };
 
-const markFavorites = (tree, favorites) => {
-  const isFavorite = favorites.includes(tree.id);
-
-  return {
-    ...tree,
-    isFavorite,
-    nodes: tree.nodes.map((childNode) => markFavorites(childNode, favorites)),
-  };
-};
-
-const result = markFavorites(tree, favorites);
-
-console.log(result);
+// examples
+//pinger(5, 100); // makes 5 writes with 100 ms interval
+pinger(7, 1000); // makes 7 writes with 1500 ms interval
