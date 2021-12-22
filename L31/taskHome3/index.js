@@ -6,4 +6,4 @@ export const delay = (timeOut) => {
   });
   return res;
 };
-delay(3000).then(() => console.log(`Hello`));
+//delay(3000).then(() => console.log(`Hello`));
