@@ -1,13 +1,21 @@
-export const parseUser = (json) => {
+const getUsers = (USERID) => {
   try {
-    return JSON.parse(json);
+    return fetch(`https://api.github.com/users/${USERID}`).then((response) =>
+      response.json()
+    );
   } catch (err) {
-    return null;
+    console.log(err);
   }
 };
 
-/*
-const json1 = `{"name": "Ed", "age": 18}`;
+export const getUsersBlogs = async (users) => {
+  const arrOfPromise = users.map((user) => getUsers(user));
+  const resolvedPromises = await Promise.all(arrOfPromise);
 
-console.log(parseUser(json1));
-*/
+  const linkList = resolvedPromises.map((el) => el.blog);
+  return linkList;
+};
+
+getUsersBlogs([`facebook`, `google`, `Microsoft`]).then((linkList) =>
+  console.log(linkList)
+);
